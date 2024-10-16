@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pousada Jeri</title>
+    <link rel="stylesheet" href="./link.css">
+    <link rel="shortcut icon" href="./img/depositphotos_44276335-stock-illustration-canary-bird-character-cartoon-illustration-removebg-preview.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+            <a href="../index.html"><img src="../logo/Pousada-Photoroom.png" alt="Logo Hoteis.com" ></a> 
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#galeria"><button class="btn btn-primary" type="button">Imagens</button></a></li>
+                    <li><a href="#sobre"><button class="btn btn-primary" type="button">Sobre</button></a></li>
+                    <li><a href="#descrição"><button class="btn btn-primary" type="button">Descrição</button></a></li>
+                    <li><a href="#Estadia"><button class="btn btn-primary" type="button">Reserve sua estadia!</button></a></li>
+                    <li class="suporte"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Suporte</button></li>
+
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Nova Mensagem (Dúvidas/Esclarecimentos)</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Para:</label>
+                                <input type="text" class="form-control" id="recipient-name" value="suporte-pousadacanarios@gmail.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">Mensagem:</label>
+                                <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Enviar Mensagem</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </nav>
+            <div class="actions">
+                <a href='https://www.instagram.com/pousadascanarios/'><button type="button" class="btn btn-outline-dark">Instagram</button></a>
+            </div>
+        </div>
+    </header>
+
+    <br>
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="voltar">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/index.html">Página Inicial</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Pousada Charmosa</li>
+        </ol>
+      </nav>   
+    <br>
+
+    <div class="carousel-container" id="galeria">
+        <div class="main-image">
+            <img id="mainImg" src="/img/charmosa/quarto.jpg" alt="Imagem Principal">
+            <div class="image-text">
+                <h1>Pousada Charmosa</h1>
+                <p>Melhor pousada para relaxar da região!</p>
+            </div>
+        </div>
+
+        <div class="thumbnail-images">
+            <img class="thumb" src="/img/charmosa/quarto.jpg" alt="Imagem 2" onclick="changeImage('/img/charmosa/quarto.jpg')">
+            <img class="thumb" src="/img/charmosa/piscina.jpg" alt="Imagem 3" onclick="changeImage('/img/charmosa/piscina.jpg')">
+            <img class="thumb" src="/img/charmosa/vista.jpg" alt="Imagem 4" onclick="changeImage('/img/charmosa/vista.jpg')">
+        </div>
+    </div>
+<br>
+<hr>
+
+    <section class="container" id="sobre">
+        <h1>Sobre</h1>
+        <div class="info">
+        <p> Pousada charmosa com decoração acolhedora, ambiente tranquilo e toques personalizados para uma estadia inesquecível</p>
+        </div>
+    <br>
+    <br>
+    <div class="linha">
+        <img src="../linha/Sem Título-1.png" alt="" width="1000px" height="200px">
+        <img src="../linha/Sem Título-1.png" alt="" width="1000px" height="200px">
+    </div>
+
+        <div id="descrição"></div>
+        <h1>Descrição</h1>
+        <p>Pousada encantadora com atmosfera romântica, ideal para quem busca charme e conforto em um cenário relaxante. 
+            <br>Charmosa e elegante, a pousada oferece hospitalidade calorosa, quartos aconchegantes e uma experiência única em meio à natureza.</p>
+    </section>
+
+    <div class="linha">
+        <img src="../linha/Sem Título-1.png" alt="" width="1000px" height="200px">
+        <img src="../linha/Sem Título-1.png" alt="" width="1000px" height="200px">
+    </div>
+
+    <div class="container-2" id="Estadia">
+        <div class="titulo"><h1>🌴 Reserve Sua Estadia dos Sonhos! 🏖️</h1></div>
+        <form id="booking-form">
+            <div class="outros">
+                <label for="check-in">📅 Data de Entrada:</label>
+                <input type="date" id="check-in" required>
+    
+                <label for="check-out">⏳ Data de Saída:</label>
+                <input type="date" id="check-out" required>
+    
+                <label for="adults">👥 Número de Adultos:</label>
+                <input type="number" id="adults" min="1" value="1" required>
+            </div>
+
+            <div class="reservar">
+                <button type="submit" class="btn">Reservar Agora! ✨</button>
+            </div>
+        </form>
+
+        <div id="message" class="message"></div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <p>&copy; 2024 Pousada Canários. Bruno Amaro, Igor Aguiar e Maykon Oliveira.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
